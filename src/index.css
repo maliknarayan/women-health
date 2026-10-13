@@ -1,0 +1,83 @@
+:root {
+  --rose: #b83f6b;
+  --rose-dark: #8f2c52;
+  --rose-soft: #f6d3df;
+  --fertile: #cfe8dc;
+  --ovulation: #3f8f6b;
+  --bg: #fff7f9;
+  --card: #ffffff;
+  --text: #2b1d23;
+  --muted: #6e5a62;
+  --border: #ecdde3;
+  --danger: #b3261e;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 640px; margin: 0 auto; padding: 16px; display: grid; gap: 16px; }
+main.center { min-height: 100dvh; place-content: center; }
+h1, h2 { line-height: 1.2; margin: 0 0 8px; }
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.15rem; }
+a { color: var(--rose-dark); }
+:focus-visible { outline: 3px solid var(--rose); outline-offset: 2px; }
+
+.topbar { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background: var(--card); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1; }
+.brand { color: var(--rose); font-size: 1.2rem; }
+.topbar nav { display: flex; gap: 16px; }
+.topbar nav a { text-decoration: none; color: var(--muted); font-weight: 500; }
+.topbar nav a.active { color: var(--rose-dark); }
+
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 16px; }
+.narrow { max-width: 420px; }
+.hero { background: var(--rose); color: #fff; border: 0; }
+.hero p { margin: 4px 0; }
+.big { font-size: 1.5rem; font-weight: 700; }
+.muted { color: var(--muted); }
+.small { font-size: 0.875rem; }
+.error { color: var(--danger); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+.stack { display: grid; gap: 12px; }
+.row { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; }
+label { display: grid; gap: 4px; font-weight: 500; }
+label.check { display: flex; gap: 8px; align-items: start; font-weight: 400; }
+input, select { font: inherit; padding: 10px; border: 1px solid var(--border); border-radius: 10px; background: #fff; min-height: 44px; }
+button { font: inherit; font-weight: 600; padding: 10px 16px; min-height: 44px; border: 0; border-radius: 10px; background: var(--rose); color: #fff; cursor: pointer; }
+button:hover { background: var(--rose-dark); }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+button.link { background: none; color: var(--rose-dark); padding: 0; min-height: 0; text-decoration: underline; font-weight: 500; justify-self: start; }
+button.danger { background: var(--danger); }
+button.icon { background: none; color: var(--text); font-size: 1.5rem; padding: 0 12px; }
+
+ul.plain { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.history li { display: flex; justify-content: space-between; gap: 12px; }
+.articles a { text-decoration: none; }
+.articles h2 { color: var(--rose-dark); margin: 0; }
+.articles p { margin: 4px 0 0; }
+
+.cal-head { display: flex; justify-content: space-between; align-items: center; }
+.cal-head h2 { margin: 0; }
+.cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; margin-top: 8px; }
+.dow { font-size: 0.75rem; color: var(--muted); }
+.day { aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; font-size: 0.9rem; }
+.day.period { background: var(--rose); color: #fff; }
+.day.predicted { border: 2px dashed var(--rose); }
+.day.fertile { background: var(--fertile); }
+.day.ovulation { background: var(--ovulation); color: #fff; }
+.day.today { font-weight: 800; box-shadow: inset 0 0 0 2px var(--text); }
+.legend { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 12px; font-size: 0.8rem; color: var(--muted); }
+.legend li { display: flex; align-items: center; gap: 6px; }
+.swatch { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.swatch.period { background: var(--rose); }
+.swatch.predicted { border: 2px dashed var(--rose); }
+.swatch.fertile { background: var(--fertile); }
+.swatch.ovulation { background: var(--ovulation); }
+
+.prose h1 { color: var(--rose-dark); }
+.prose h2 { margin-top: 20px; }
+.prose li { margin: 4px 0; }

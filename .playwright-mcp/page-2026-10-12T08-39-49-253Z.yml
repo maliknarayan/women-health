@@ -1,0 +1,9 @@
+- main [ref=e3]:
+  - generic [ref=e4]:
+    - heading "Sakhi" [level=1] [ref=e5]
+    - paragraph [ref=e6]: Track your cycle, get gentle reminders, and understand your body.
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - text: Email
+        - textbox "Email" [ref=e9]
+      - button "Send code" [ref=e10] [cursor=pointer]
